@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A map pin on the brand green background (adaptive icon, 108dp canvas). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,30C44.6,30 37,37.6 37,47c0,12.8 17,31 17,31s17,-18.2 17,-31C71,37.6 63.4,30 54,30zM54,53.5c-3.6,0 -6.5,-2.9 -6.5,-6.5s2.9,-6.5 6.5,-6.5 6.5,2.9 6.5,6.5 -2.9,6.5 -6.5,6.5z" />
+</vector>

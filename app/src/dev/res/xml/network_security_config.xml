@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dev builds only: allow http so the app can reach a backend on the developer's PC
+     (http://localhost:5000 with adb reverse, or http://<PC address>:5000) while testing.
+     The prod build uses src/main/res/xml/network_security_config.xml (https only). -->
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <base-config
+        cleartextTrafficPermitted="true"
+        tools:ignore="InsecureBaseConfiguration" />
+</network-security-config>

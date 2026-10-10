@@ -1,0 +1,43 @@
+# Runs on every push to main and every pull request once the project is on GitHub.
+name: Android
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      # gradlew may lose its executable bit when committed from Windows.
+      - run: chmod +x gradlew
+
+      - name: Style, lint and unit tests
+        run: ./gradlew ktlintCheck lintDevDebug lintProdRelease testDevDebugUnitTest
+
+      - name: Build dev and prod
+        run: ./gradlew assembleDevDebug assembleProdRelease
+
+      - name: Keep the reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reports
+          path: |
+            app/build/reports
+            app/build/test-results

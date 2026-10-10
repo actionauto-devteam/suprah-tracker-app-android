@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Suprah Tracker</string>
+
+    <!-- Notification channels (IDs in TrackingNotifications must never change) -->
+    <string name="channel_tracking">Location tracking</string>
+    <string name="channel_tracking_description">Shows while you\'re on duty.</string>
+    <string name="channel_alerts">Tracking alerts</string>
+    <string name="channel_alerts_description">When tracking needs your attention, for example a missing permission.</string>
+
+    <!-- Pairing (spec P-1 to P-7) -->
+    <string name="pair_brand">SUPRAH AI</string>
+    <string name="pair_title">Driver Tracker</string>
+    <string name="pair_intro">This app shares your location with Dispatch while you have an accepted load, even with your screen locked. Keep using the Driver Portal for everything else.</string>
+    <string name="pair_heading">Pair this phone</string>
+    <string name="pair_instructions">In the Driver Portal, open Settings → Phone tracking and tap Set up phone tracking. Enter the 8-character code it shows.</string>
+    <string name="pair_code_label">Pairing code</string>
+    <string name="pair_code_placeholder">ABCD-2345</string>
+    <string name="pair_button">Pair this phone</string>
+    <string name="pair_server_label">Suprah server</string>
+    <string name="pair_server_hint">Test build: use http://localhost:5000 with adb reverse, or http://&lt;your PC\'s address&gt;:5000.</string>
+    <string name="pair_server_change">Server: %1$s · Change</string>
+    <string name="pair_error_https_only">The server address must start with https://.</string>
+    <string name="pair_error_scheme">The server address must start with http:// or https://.</string>
+    <string name="pair_error_offline">Couldn\'t reach Suprah. Check your internet connection and try again.</string>
+
+    <!-- Home (spec H-1 to H-9) -->
+    <string name="home_brand">SUPRAH AI · DRIVER TRACKER</string>
+    <string name="home_driver_fallback">Driver</string>
+    <string name="status_waiting_title">Waiting for approval</string>
+    <string name="status_waiting_body">Dispatch needs to approve this phone before your location is shared. Keep this screen open: Start on duty unlocks by itself as soon as they do. If it\'s taking long, ask your dispatcher.</string>
+    <string name="status_off_duty_title">Off duty</string>
+    <string name="status_off_duty_body">Tap Start on duty at the start of your day. Your location is only shared while you have an accepted load.</string>
+    <string name="status_sharing_title">Sharing your location</string>
+    <string name="status_sharing_body">Dispatch can follow your trip. You can lock your screen or use other apps.</string>
+    <string name="status_no_load_title">On duty · no active load</string>
+    <string name="status_no_load_body">Location is paused. It starts by itself when you accept a load.</string>
+    <string name="status_no_loads">No accepted load right now.</string>
+    <plurals name="status_loads">
+        <item quantity="one">%d accepted load.</item>
+        <item quantity="other">%d accepted loads.</item>
+    </plurals>
+    <string name="duty_start">Start on duty</string>
+    <string name="duty_stop">Go off duty</string>
+    <string name="duty_hint_approval">You can start once Dispatch approves this phone.</string>
+    <string name="duty_hint_permissions">Allow precise location and turn on location services first (below).</string>
+    <string name="info_last_sent">Last location sent</string>
+    <string name="info_last_fix">Last GPS reading</string>
+    <string name="info_accuracy">%1$s · ±%2$d m</string>
+    <string name="info_queued">Saved, waiting to send</string>
+    <plurals name="info_catching_up">
+        <item quantity="one">Sending %d saved location from earlier. Your current location is shared first, so Dispatch still sees where you are.</item>
+        <item quantity="other">Sending %d saved locations from earlier. Your current location is shared first, so Dispatch still sees where you are. This can take a few minutes; you don\'t need to do anything.</item>
+    </plurals>
+    <plurals name="info_saved_off_duty">
+        <item quantity="one">%d saved location will be sent the next time you go on duty.</item>
+        <item quantity="other">%d saved locations will be sent the next time you go on duty.</item>
+    </plurals>
+    <string name="info_none">—</string>
+    <string name="home_offline">No internet connection right now. Your locations are still being saved on this phone and will be sent when you\'re back online.</string>
+    <string name="settings_title">Phone settings</string>
+    <string name="settings_location_services">Location services on</string>
+    <string name="settings_precise">Precise location allowed</string>
+    <string name="settings_all_the_time">Location allowed all the time</string>
+    <string name="settings_notifications">Notifications allowed</string>
+    <string name="settings_battery">No battery restrictions</string>
+    <string name="settings_autostart">Autostart on (Xiaomi)</string>
+    <string name="settings_turn_on">Turn on</string>
+    <string name="settings_allow">Allow</string>
+    <string name="settings_fix">Fix</string>
+    <string name="settings_check">Check</string>
+    <string name="settings_done">Done</string>
+    <string name="settings_note">Each one helps Android keep tracking running while your screen is locked.</string>
+    <string name="settings_xiaomi_note">Xiaomi phones need Autostart on so tracking comes back by itself after a restart or an app update.</string>
+    <string name="home_open_portal">Open the Driver Portal</string>
+    <string name="unlink_button">Unlink this phone</string>
+    <string name="unlink_title">Unlink this phone?</string>
+    <string name="unlink_body">Dispatch stops receiving locations from this phone right away. You can pair it again later with a new code from the Driver Portal.</string>
+    <string name="unlink_confirm">Unlink</string>
+    <string name="unlink_cancel">Cancel</string>
+
+    <!-- Tracking notification and alerts (spec T-2, T-13, T-16) -->
+    <string name="notification_on_duty">On duty</string>
+    <string name="notification_checking">Checking for an accepted load…</string>
+    <string name="notification_waiting_title">On duty · waiting for approval</string>
+    <string name="notification_waiting_text">Dispatch needs to approve this phone. Tracking starts as soon as they do.</string>
+    <string name="notification_sharing_title">Sharing your location</string>
+    <string name="notification_last_sent">Last sent %1$s</string>
+    <string name="notification_starting">Starting…</string>
+    <string name="notification_no_load_title">On duty · no active load</string>
+    <string name="notification_no_load_text">Location is paused until you have an accepted load.</string>
+    <string name="notification_action_off_duty">Go off duty</string>
+    <string name="alert_permission_title">Location permission needed</string>
+    <string name="alert_permission_text">Open Suprah Tracker and allow precise location so Dispatch can follow your trip.</string>
+    <string name="alert_resume_title">Tap to resume tracking</string>
+    <string name="alert_resume_text">Open Suprah Tracker to continue sharing your location with Dispatch.</string>
+    <string name="alert_unlinked_title">Phone unlinked</string>
+    <string name="alert_unlinked_text">This phone is no longer linked to your Suprah account. Open the app to pair it again.</string>
+
+    <!-- Problems shown on the home screen and in the notification (spec T-13, T-14) -->
+    <string name="problem_status_offline">No internet connection. Your locations are saved on this phone and will be sent automatically when you\'re back online. You don\'t need to do anything.</string>
+    <plurals name="problem_send_offline">
+        <item quantity="one">No internet connection. %d location is saved on this phone and will be sent automatically when you\'re back online. You don\'t need to do anything.</item>
+        <item quantity="other">No internet connection. %d locations are saved on this phone and will be sent automatically when you\'re back online. You don\'t need to do anything.</item>
+    </plurals>
+    <plurals name="problem_send_slow">
+        <item quantity="one">The connection is slow, so %d saved location is taking longer to send. Your current location is still shared first. You don\'t need to do anything.</item>
+        <item quantity="other">The connection is slow, so %d saved locations are taking longer to send. Your current location is still shared first. This can take a few minutes; you don\'t need to do anything.</item>
+    </plurals>
+    <string name="problem_tracking_off">Your company has switched phone tracking off for now, so your location isn\'t being shared. You don\'t need to do anything; it starts again when they switch it back on.</string>
+    <string name="problem_permission_off">Location permission was turned off, so your location isn\'t being shared. Open Suprah Tracker and allow location again.</string>
+    <string name="problem_unlinked">This phone was unlinked from your account, so your location isn\'t being shared. Pair it again with a new code from the Driver Portal.</string>
+    <string name="problem_server_error">Suprah couldn\'t accept this right now (error %1$d). The app keeps trying, and your locations stay saved on this phone.</string>
+</resources>
